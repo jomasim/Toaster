@@ -1,5 +1,6 @@
 package com.devloop.toaster;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -63,6 +64,12 @@ public class RegisterActivity extends AppCompatActivity {
         signUpUser();
     }
 
+    @OnClick(R.id.sign_in)
+    public void redirectLogin() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
     public void signUpUser() {
         baseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
@@ -70,6 +77,8 @@ public class RegisterActivity extends AppCompatActivity {
                         circularButton.revertAnimation();
                         Toast.makeText(this, "Hello, registration was successful!",
                                 Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(this, MainActivity.class);
+                        startActivity(intent);
                     } else {
                         circularButton.revertAnimation();
                         Toast.makeText(this, String.valueOf(Objects.requireNonNull(
