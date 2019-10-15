@@ -21,12 +21,12 @@
         android:id="@+id/header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/dinpro"
-        android:text="@string/sign_up_here"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:textSize="18sp"
+        android:fontFamily="@font/dinpro"
+        android:text="@string/sign_up_here"
         android:textColor="@color/orange_text"
+        android:textSize="18sp"
         android:textStyle="bold"
 
         app:layout_constraintLeft_toLeftOf="parent"
@@ -143,7 +143,7 @@
             android:textColor="@color/whiteText" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
         android:id="@+id/sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -152,15 +152,19 @@
         android:layout_marginEnd="20dp"
         android:background="@drawable/round_button"
         android:text="@string/sign_up"
+        android:textAllCaps="false"
         android:textColor="@color/whiteText"
         android:textFontWeight="600"
         android:textSize="13sp"
         android:theme="@style/Button"
-        android:textAllCaps="false"
 
+        app:initialCornerAngle="27dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmTextField" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmTextField"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp"
+        app:spinning_bar_width="4dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -177,4 +181,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_up" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,12 +19,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.List;
 import java.util.Objects;
 
+import br.com.simplepass.loading_button_lib.customViews.CircularProgressButton;
 import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class RegisterActivity extends AppCompatActivity {
+    @BindView(R.id.sign_up)
+    CircularProgressButton circularButton;
     @BindView(R.id.username)
     EditText usernameField;
     @BindView(R.id.email)
@@ -54,6 +57,9 @@ public class RegisterActivity extends AppCompatActivity {
     public void submit() {
         email = emailField.getText().toString();
         password = passwordField.getText().toString();
+
+        //start progress
+        circularButton.startAnimation();
         signUpUser();
     }
 
@@ -61,9 +67,11 @@ public class RegisterActivity extends AppCompatActivity {
         baseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
+                        circularButton.revertAnimation();
                         Toast.makeText(this, "Hello, registration was successful!",
                                 Toast.LENGTH_LONG).show();
                     } else {
+                        circularButton.revertAnimation();
                         Toast.makeText(this, String.valueOf(Objects.requireNonNull(
                                 task.getException()).getMessage()), Toast.LENGTH_LONG).show();
                     }
