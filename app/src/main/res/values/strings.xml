@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">toaster</string>
+    <string name="app_name">Toaster</string>
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="remember_me">Remember me</string>
@@ -11,4 +11,8 @@
     <string name="password">Password</string>
     <string name="confirm_password_hint">Confirm password</string>
     <string name="sign_up_here">Sign up here!</string>
+    <string name="welcome_smiles">welcome_smiles</string>
+    <string name="hello_john_doe">Hello, John Doe</string>
+    <string name="update_profile_photo">Update profile photo</string>
+    <string name="secondary_title">Welcome to Toaster</string>
 </resources>

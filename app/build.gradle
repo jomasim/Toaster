@@ -43,5 +43,7 @@ dependencies {
 
     // circular loading button
     implementation 'br.com.simplepass:loading-button-android:1.14.0'
+    // spinkit
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
 }
 apply plugin: 'com.google.gms.google-services'

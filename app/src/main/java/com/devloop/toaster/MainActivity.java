@@ -2,6 +2,7 @@ package com.devloop.toaster;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -42,13 +43,6 @@ public class MainActivity extends AppCompatActivity {
         baseAuth = FirebaseAuth.getInstance();
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        // get current user and redirect accordingly
-        FirebaseUser currentUser = baseAuth.getCurrentUser();
-    }
-
     @OnClick(R.id.sign_in)
     public void submit() {
         email = emailField.getText().toString();
@@ -68,8 +62,9 @@ public class MainActivity extends AppCompatActivity {
         baseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
             if (task.isSuccessful()) {
                 circularButton.revertAnimation();
-                Toast.makeText(this, "Hello, login was successful!",
-                        Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this, Home.class);
+                startActivity(intent);
+                Log.d("result", Objects.requireNonNull(task.getResult()).toString());
             } else {
                 circularButton.revertAnimation();
                 Toast.makeText(this, String.valueOf(Objects.requireNonNull(
