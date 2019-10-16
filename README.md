@@ -5,16 +5,16 @@ Sign up on the application also implements Firebase sign up service using email 
 
 1. Sign up
 
-    ![Sign up screen](./screenshots/register.jpg =100*100);
+    ![Sign up screen](./screenshots/register.jpg);
 
 2. Sign in
 
-    ![Sign in screen](./screenshots/login.jpg =100*100);
+    ![Sign in screen](./screenshots/login.jpg);
 
 3. Image capture and processing
 
-    ![Sign up screen](./screenshots/processing.jpg =100*100);
+    ![Sign up screen](./screenshots/processing.jpg);
 
 4. Detected Face
 
-    ![After processing](./screenshots/detected.jpg =100*100);
+    ![After processing](./screenshots/detected.jpg);
