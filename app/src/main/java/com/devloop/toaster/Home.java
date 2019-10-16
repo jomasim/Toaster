@@ -37,6 +37,7 @@ public class Home extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
+        setTitle("Face Detection");
         ButterKnife.bind(this);
         alertDialog = new AlertDialog.Builder(this)
                 .setMessage("Processing image...")
