@@ -13,6 +13,6 @@
     <string name="sign_up_here">Sign up here!</string>
     <string name="welcome_smiles">welcome_smiles</string>
     <string name="hello_john_doe">Hello, John Doe</string>
-    <string name="update_profile_photo">Update profile photo</string>
+    <string name="update_profile_photo">Get Started</string>
     <string name="secondary_title">Welcome to Toaster</string>
 </resources>
