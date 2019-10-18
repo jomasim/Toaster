@@ -10,7 +10,7 @@
         android:roundIcon="@drawable/ic_app_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Drawing">
             <meta-data
                 android:name="com.google.firebase.ml.vision.DEPENDENCIES"
                 android:value="face" />
@@ -24,6 +24,7 @@
         <activity
             android:name=".Home"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
